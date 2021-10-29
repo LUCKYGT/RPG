@@ -12,7 +12,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tensorboardX import SummaryWriter
 
-from envs import MGEnv, CleanupEnv, HarvestEnv, GridWorldEnv,multi_GridWorldEnv
+#添加路径
+import sys
+sys.path.append(os.getcwd())
+
+from envs import MGEnv,  GridWorldEnv,multi_GridWorldEnv
 from algorithm.ppo import PPO
 from algorithm.model import Policy
 
